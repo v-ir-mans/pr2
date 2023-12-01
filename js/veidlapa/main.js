@@ -52,8 +52,11 @@ function renderOrder() {
             curIdsList=curIdsList.filter(i => i !== boxId)
         }else{
             orderDiv.innerHTML+=(`
-            <label id="${boxId}" for="quantity">${nosaukums}|${currentDate.getTime()}:
-            <input type="number" id="quantity" name="quantity" min="1" max="100" value="1">
+            <label class="orderItem" id="${boxId}" for="quantity">
+            <li>
+            ${nosaukums}:
+            </li>
+            <input class="shadow" type="number" name="quantity" min="1" max="8" value="1">
             </label>`)
         }
         console.log(curIdsList);

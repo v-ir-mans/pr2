@@ -65,7 +65,42 @@
         }
 
         #orderBody{
-            min-height: 200px;
+        }
+
+        #orderList{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .orderItem {
+            display: flex;
+            justify-content:space-between;
+            list-style-position: outside;
+        }
+        .orderItem > input{
+            border-radius: 20px;
+            text-align: center;
+            border: none;
+            background-color: #FFF8EC;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            width: max-content;
+        }
+        #orderButton{
+            font-family: 'Poppins', sans-serif;
+            width: 100%;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 20px;
+            font-size: large;
+            background-color: #FFB639;
+            font-weight: 500;
+        }
+        #orderButton:hover{
+            cursor: pointer;
+            background-color: #FFF8EC;
+            transition: 0.3s;
         }
     </style>
 <body>
@@ -113,8 +148,10 @@
                  <div id="orderBox">
                     <h2>Pasūtījums</h2>
                     <div id="orderBody" class="card shadow">
+                        <button class="shadow" id="orderButton">Pasūtīt</button>
+                        
                         <div id="orderList">
-                            </div>
+                        </div>
                     </div>
                 </div>
 
