@@ -6,7 +6,7 @@ body{
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background-image: url('../images/background.png');
-    background-size: 60% ;
+    background-size:auto;
 }
 #bigContainer{
     display: grid;
@@ -76,8 +76,6 @@ header {
 
 }
 #navbarTabs>a.important{
-    background-color: #ffffff;
-    border-radius: 20px;
     font-weight: 600;
 }
 #navbarTabs>a:not(.selectedTab):hover{

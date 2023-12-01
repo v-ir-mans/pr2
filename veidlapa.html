@@ -3,43 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Picērija pR2</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_package_v0.16/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_package_v0.16/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_package_v0.16/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon_package_v0.16/site.webmanifest">
+    <link rel="mask-icon" href="images/favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    
+    <link rel="stylesheet" href="css/main.css">
+    
+
+    <style>
+
+        .itemLabel{
+            color: black;
+            background-color: #FFF8EC;
+            text-decoration: none;
+            font-weight: 500;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 20px;
+            transition: 0.4s;
+            user-select: none;
+
+            display: inline-block;
+        }
+        label.checked{
+            color: black;
+            background-color:  #FFB639;
+        }
+
+        input.itemCheckbox{/*
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-color: blue;
+            width: 10px;  
+            height: 10px; 
+            cursor: pointer;*/
+        }
+
+        #pizzas{
+            display: flex;
+            flex-wrap:wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 20px;
+        }
+        form {
+            display: grid;
+            grid-template-columns:1fr 2fr ;
+            gap: 20px;
+        }
+
+        #orderBody{
+            min-height: 200px;
+        }
+    </style>
+<body>
+
+    <div id="bigContainer">
+        <header class="shadow">
+            <div id="logoSquare" class="shadow">
+                <img id="logo" src="images/logo.png" alt="Vajag ievietot">
+                <p>Picērija</p>
+            </div>
+            <div id="gallery">
+                <p id="telNum" class="shadow">+371 224 412 66</p>
+            </div>
+            <nav>
+                <div id="navbarTabs">
+                    <a href="index.html"><div><p>Sākumlapa</p></div></a>
+                    <a href="edienkarte.html"><div><p>Ēdienkarte</p></div></a>
+                    <a href=""><div><p>Home</p></div></a>
+                    <a href=""><div><p>Home</p></div></a>
+                    <a href=""><div><p>Home</p></div></a>
+                    <a class="selectedTab important" href="veidlapa.html"><div><p>Pasūtīt</p></div></a>
+                </div>
+                <div id="iconRow">
+                    
+                    <a href="link_to_whatsapp_profile">
+                        <img src="images/icons/whatsapp-svgrepo-com.svg" class="icon" alt=""></a>
+                    <a href="link_to_instagram_profile">
+                        <img src="images/icons/instagram-svgrepo-com.svg" class="icon" alt=""></a>
+                    
+                    <a href="link_to_facebook_profile">
+                        <img src="images/icons/facebook-svgrepo-com.svg" class="icon" alt=""></a>
+                    
+                    <a href="mailto:your_email@example.com">
+                        <img src="images/icons/mail-svgrepo-com.svg" class="icon" alt=""></a>
+                    
+                    <a href="link_to_twitter_profile">
+                        <img src="images/icons/twitter-svgrepo-com.svg" class="icon" alt=""></a>
+                    
+                </div>
+            </nav>
+        </header>
+        
+        <section>
+            <form action="#">               
+                 <div id="orderBox">
+                    <h2>Pasūtījums</h2>
+                    <div id="orderBody" class="card shadow">
+                        <div id="orderList">
+                            </div>
+                    </div>
+                </div>
+
+                <div>
+                <h2>Picas</h2>
+                <div id="pizzas" class="shadow card">   
+                <label class="itemLabel"> 
+                    <input class="itemCheckbox" type="checkbox" id="pizzas1" name="pizzas1" onchange="userChangesInput(this)">
+                    Pica ar nugetiem un medu</label> 
+
+                <label class="itemLabel"><input class="itemCheckbox" type="checkbox" id="pizzas2" name="pizzas2" onchange="userChangesInput(this)"> Pica ar banāniem un vasabi</label> 
+                <label class="itemLabel"><input class="itemCheckbox" type="checkbox" id="pizzas3" name="pizzas3" onchange="userChangesInput(this)"> Pica ar kazas sieru un marmelādi</label> 
+                <label class="itemLabel"><input class="itemCheckbox" type="checkbox" id="pizzas4" name="pizzas4" onchange="userChangesInput(this)"> Pica ar bietēm un putukrējumu</label> 
+                <label class="itemLabel"><input class="itemCheckbox" type="checkbox" id="pizzas5" name="pizzas5" onchange="userChangesInput(this)"> Pica ar želejlācīšiem</label> 
+                <label class="itemLabel"><input class="itemCheckbox" type="checkbox" id="pizzas6" name="pizzas6" onchange="userChangesInput(this)"> Pica ar kapātiem gurķiem</label> 
+                <label class="itemLabel"><input class="itemCheckbox" type="checkbox" id="pizzas7" name="pizzas7" onchange="userChangesInput(this)"> Pica ar marinētiem gurķiem un biezpienu</label> 
+                <label class="itemLabel"><input class="itemCheckbox" type="checkbox" id="pizzas8" name="pizzas8" onchange="userChangesInput(this)"> Pica ar mellenēm un aso mērci</label> 
+                <label class="itemLabel"><input class="itemCheckbox" type="checkbox" id="pizzas9" name="pizzas9" onchange="userChangesInput(this)"> Pica ar garnelēm un šokolādes mērci</label> 
+                <label class="itemLabel"><input class="itemCheckbox" type="checkbox" id="pizzas10" name="pizzas10" onchange="userChangesInput(this)"> Pica ar sardīnēm un zefīriņiem</label> 
+                <label class="itemLabel"><input class="itemCheckbox" type="checkbox" id="pizzas10" name="pizzas10" onchange="userChangesInput(this)"> Pica ar sardīnēm un zefīriņiem</label> 
+                <label class="itemLabel"><input class="itemCheckbox" type="checkbox" id="pizzas11" name="pizzas11" onchange="userChangesInput(this)"> Pica ar dillēm un salami desu</label> 
+                <label class="itemLabel"><input class="itemCheckbox" type="checkbox" id="pizzas12" name="pizzas12" onchange="userChangesInput(this)"> Pica ar avakado un vistu</label> 
+                <label class="itemLabel"><input class="itemCheckbox" type="checkbox" id="pizzas13" name="pizzas13" onchange="userChangesInput(this)"> Pica ar lakricu un olīvām</label> 
+                </div>
+                </div>
+
+            </form> 
+        </section>
+        
+        <footer class="shadow">
+
+            <div id="footerInfo">
+                <div class="footerList">
+                    <h3>Kontakti</h3>
+                    <p>Remijs</p>
+                    <p>Remijs</p>
+                    <p>Remijs</p>
+                </div>
+                <div class="footerList">
+                    <h3>Sociālie tīkli</h3>
+                    <p>Remijs</p>
+                    <p>Remijs</p>
+                    <p>Remijs</p>
+                </div>
+                <div class="footerList" style="margin-right: 50px;">
+                    <h3>Sadaļas</h3>
+                    <p>Remijs</p>
+                    <p>Remijs</p>
+                    <p>Remijs</p>
+                </div>
+                <div id="footerGM">
+                <iframe class="shadow" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2176.5881451190958!2d24.158467313174597!3d56.938724073435814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eece1ed51cd319%3A0x78484219943a2771!2sAiviekstes%20iela%2019%2C%20Latgales%20priek%C5%A1pils%C4%93ta%2C%20R%C4%ABga%2C%20LV-1019!5e0!3m2!1slv!2slv!4v1700932407072!5m2!1slv!2slv" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <div class="allRows shadow" id="disclaimer"><p>Visas tiesības rezervētas © 2023 SBA Rādiuss 01/12/23</p></div>
+            
+        </footer>
+    </div>
+
 
     <script src="js/veidlapa/main.js"></script>
-</head>
-<body>
-    <form action="">
-        <label>
-            <input type="checkbox" name="pizza" value="pepperoni" onchange="userChangesInput()">
-            Pepperoni
-          </label>
-          
-          <label>
-            <input type="checkbox" name="pizza" value="margherita" onchange="userChangesInput()">
-            Margherita
-          </label>
-            
-          <label>
-            <input type="checkbox" name="pizza" value="vegetarian" onchange="userChangesInput()">
-            Vegetarian
-          </label>
-      
-          <label>
-            <input type="checkbox" name="pizza" value="supreme" onchange="userChangesInput()">
-            Supreme
-          </label>
-      
-          <label>
-            <input type="checkbox" name="pizza" value="hawaiian" onchange="userChangesInput()">
-            Hawaiian
-          </label>
-
-          <br>
-
-          <div id="checkList">
-          </div>
-
-          <input type="submit" value="Order Pizzas">
-    </form>
 </body>
 </html>
