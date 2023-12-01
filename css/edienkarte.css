@@ -48,6 +48,7 @@ section {
         transition: 0.5s;
     }
 
+
     .card > .button:hover {
         border-radius: 20px;
         cursor: pointer;

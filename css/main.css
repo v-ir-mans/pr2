@@ -75,6 +75,11 @@ header {
     font-weight: 500;
 
 }
+#navbarTabs>a.important{
+    background-color: #ffffff;
+    border-radius: 20px;
+    font-weight: 600;
+}
 #navbarTabs>a:not(.selectedTab):hover{
     text-decoration: overline;
     background-color: #FFF8EC;
