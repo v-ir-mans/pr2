@@ -10,11 +10,18 @@ function userChangesInput(selCheckbox) {
     renderOrder()
 }
 
+function markIfEmpty() {
+    let labels = document.getElementById("orderList").querySelectorAll('label');
+    let orderButton=document.getElementById("orderButton")
+    if (labels.length==0) {
+        orderButton.disabled = true;
+    }else{
+        orderButton.disabled = false;
+    }
+}
+
 function renderOrder() {
-
-
-
-
+    //Iegūst sarakstu ar jau esošajiem vienumiem
     let orderDiv = document.getElementById("orderList")
     let labelsInOrderDiv = orderDiv.querySelectorAll('label');
 
@@ -31,47 +38,47 @@ function renderOrder() {
             let inputValue = numberInput.value;
             curValueDict[divId]=inputValue;
         } else {
-            // Handle the case where there is no number input inside the label
-            curValueDict[divId]=1; // or any other default value
+            curValueDict[divId]=1;
         }
     });
 
-    let checkboxes = document.querySelectorAll('.itemCheckbox:checked')
-    console.log(checkboxes);
-    
+    let cattegories= document.querySelectorAll('.cattegory')
+
+    let checkboxDict={}
+    cattegories.forEach((c)=>{
+        checkboxDict[c.id]=c.querySelectorAll('.itemCheckbox:checked')
+    })
+    console.log(checkboxDict);
+
     let nosaukums
     let boxId
 
+    orderDiv.innerHTML=''
+    
+    for (let c in checkboxDict) {
+        let curCheckboxes=checkboxDict[c]
 
-    checkboxes.forEach((box) => {
-        
-        nosaukums=box.parentNode.textContent.trim()
-        boxId=`orderItem_${box.id}`
-
-        if (curIdsList.includes(boxId)){
-            curIdsList=curIdsList.filter(i => i !== boxId)
-        }else{
-            orderDiv.innerHTML+=(`
-            <label class="orderItem" id="${boxId}" for="quantity">
-            <li>
-            ${nosaukums}:
-            </li>
-            <input class="shadow" type="number" name="quantity" min="1" max="8" value="1">
-            </label>`)
+        let counter=0
+        curCheckboxes.forEach((box) => {
+            nosaukums=box.parentNode.textContent.trim()
+            boxId=`orderItem_${box.id}`
+                orderDiv.innerHTML+=(`
+                <label class="orderItem" id="${boxId}" for="quantity">
+                <li>
+                ${nosaukums}:
+                </li>
+                <input class="shadow" type="number" name="quantity" min="1" max="8" value="1">
+                </label>`)
+            
+                counter+=1
+        });
+        if (counter>0) {
+            orderDiv.innerHTML+=`<div class="break"></div>`
         }
-        console.log(curIdsList);
-    });
+    }
 
 
-    curIdsList.forEach(id => {
-        var elementToRemove = document.getElementById(id);
-        if (elementToRemove) {
-            elementToRemove.remove();
-        } else {
-            console.log("Element with ID " + id + " not found");
-        }
-    });
-
+    //Ievieto vecās liet. izvēlētās vērtības, kas kkādu html iemeslu dēļ pazūd
     for (const inputId in curValueDict) {
         if (curValueDict.hasOwnProperty(inputId)) {
           // Get the input element using its ID
@@ -85,6 +92,7 @@ function renderOrder() {
         }
       }
 
+      markIfEmpty()
 }
 
 const params = new URLSearchParams(window.location.search)
@@ -106,3 +114,7 @@ if (params.has('itemid') && params.has('itemtype')) {
         console.log('Checkbox not found with the specified ID')
     }
 }
+
+
+
+markIfEmpty()

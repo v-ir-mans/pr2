@@ -14,95 +14,7 @@
     <meta name="theme-color" content="#ffffff">
     
     <link rel="stylesheet" href="css/main.css">
-    
-
-    <style>
-
-        .itemLabel{
-            color: black;
-            background-color: #FFF8EC;
-            text-decoration: none;
-            font-weight: 500;
-            padding-left: 10px;
-            padding-right: 10px;
-            border-radius: 20px;
-            transition: 0.4s;
-            user-select: none;
-
-            display: inline-block;
-        }
-        label.checked{
-            color: black;
-            background-color:  #FFB639;
-        }
-
-        input.itemCheckbox{/*
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            background-color: blue;
-            width: 10px;  
-            height: 10px; 
-            cursor: pointer;*/
-        }
-
-        .cattegory{
-            display: flex;
-            flex-wrap:wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-        }
-        .card {
-            background-color: white;
-            padding: 20px;
-            border-radius: 20px;
-        }
-        form {
-            display: grid;
-            grid-template-columns:1fr 2fr ;
-            gap: 20px;
-        }
-
-        #orderBody{
-        }
-
-        #orderList{
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .orderItem {
-            display: flex;
-            justify-content:space-between;
-            list-style-position: outside;
-        }
-        .orderItem > input{
-            border-radius: 20px;
-            text-align: center;
-            border: none;
-            background-color: #FFF8EC;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 600;
-            width: max-content;
-        }
-        #orderButton{
-            font-family: 'Poppins', sans-serif;
-            width: 100%;
-            margin-bottom: 20px;
-            border: none;
-            border-radius: 20px;
-            font-size: large;
-            background-color: #FFB639;
-            font-weight: 500;
-        }
-        #orderButton:hover{
-            cursor: pointer;
-            background-color: #FFF8EC;
-            transition: 0.3s;
-        }
-    </style>
+    <link rel="stylesheet" href="css/veidlapa.css">
 <body>
 
     <div id="bigContainer">
@@ -144,12 +56,28 @@
         </header>
         
         <section>
-            <form action="#">               
+            <form action="formSubmited.html">               
                  <div id="orderBox">
                     <h2>Pasūtījums</h2>
                     <div id="orderBody" class="card shadow">
-                        <button class="shadow" id="orderButton">Pasūtīt</button>
                         
+                        <input type="submit" class="shadow" id="orderButton" value="Pasūtīt" disabled>
+                        
+                        <div id="userInfoOrderPart" class="shadow">
+                        
+                        <label for="name">Jūsu vārds:</label>
+                        <input class="shadow" type="text" id="name" name="name" required>
+
+                        <label for="phone">Telefona numurs:</label>
+                        <input class="shadow" type="tel" id="phone" name="phone" required>
+
+                        <label for="time">Izņemšanas laiks (no 10:00 līdz 18:30):</label>
+                        <input class="shadow" type="time" id="time" name="time" min="09:00" max="18:00" required>
+
+                        <textarea class="shadow" id="comments" name="comments" rows="2" required>Īpašas vēlmes:
+                        </textarea>
+                        </div>
+
                         <div id="orderList">
                         </div>
                     </div>
@@ -175,7 +103,25 @@
                     
                     <h2>Zupas</h2>
                     <div id="soups" class="shadow card cattegory">   
-                    <label class="itemLabel"> <input class="itemCheckbox" type="checkbox" id="soups1" name="soups1" onchange="userChangesInput(this)">Pica ar nugetiem un medu</label> 
+                    <label class="itemLabel"> <input class="itemCheckbox" type="checkbox" id="soups1" name="soups1" onchange="userChangesInput(this)">Arbūzu zupa</label> 
+                    <label class="itemLabel"> <input class="itemCheckbox" type="checkbox" id="soups2" name="soups2" onchange="userChangesInput(this)">Suši zupa</label> 
+                    <label class="itemLabel"> <input class="itemCheckbox" type="checkbox" id="soups3" name="soups3" onchange="userChangesInput(this)">Kafijas zupa</label> 
+                    <label class="itemLabel"> <input class="itemCheckbox" type="checkbox" id="soups4" name="soups4" onchange="userChangesInput(this)">Kečupa zupa ar frī kartupeļiem</label> 
+                    <label class="itemLabel"> <input class="itemCheckbox" type="checkbox" id="soups5" name="soups5" onchange="userChangesInput(this)">Riekstu mikšļa zupa</label> 
+                    </div>
+
+                    <h2>Pankūkas</h2>
+                    <div id="pancakes" class="shadow card cattegory">   
+                    <label class="itemLabel"> <input class="itemCheckbox" type="checkbox" id="pancakes1" name="pancakes1" onchange="userChangesInput(this)">Pankūkas ar makaroniem un zemenēm</label> 
+                    <label class="itemLabel"> <input class="itemCheckbox" type="checkbox" id="pancakes2" name="pancakes2" onchange="userChangesInput(this)">Pankūkas ar aso mērci un zefīriņiem</label> 
+                    <label class="itemLabel"> <input class="itemCheckbox" type="checkbox" id="pancakes3" name="pancakes3" onchange="userChangesInput(this)">Pankūkas ar želejpupiņām un kļavu sīrupu</label> 
+                    </div>
+
+                    <h2>Īpašie dzērieni</h2>
+                    <div id="drinks" class="shadow card cattegory">   
+                    <label class="itemLabel"> <input class="itemCheckbox" type="checkbox" id="drinks1" name="drinks1" onchange="userChangesInput(this)">Dažādu ogu sulas slāņos</label> 
+                    <label class="itemLabel"> <input class="itemCheckbox" type="checkbox" id="drinks2" name="drinks2" onchange="userChangesInput(this)">Alkaholiskais ogļu kokteilis ar citronu</label> 
+                    <label class="itemLabel"> <input class="itemCheckbox" type="checkbox" id="drinks3" name="drinks3" onchange="userChangesInput(this)">Melleņu tēja ar mellenēm un melleņu sulu</label> 
                     </div>
                 </div>
 

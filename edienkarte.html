@@ -63,7 +63,6 @@
                 <a class="shadow" href="#soupSection">Zupas</a>
                 <a class="shadow" href="#pancakesSection">Pankūkas</a>
                 <a class="shadow" href="#specDrinkSection">Īpašie dzērieni</a>
-                <a class="shadow" href="">lieta</a>
             </div>
 
             <h2 id="pizzaSection">Picas</h2>
@@ -84,7 +83,7 @@
                         <div><p class="verticalText">Pasūtīt</p></div>
                     </div>
                 </div>
-                <div class="card shadow">
+                <div id="bananuPica" class="card shadow">
                     <div class="thumbnail shadow">
                         <img src="images/edienkarte/pizzas/bananu.jpg" alt="">
                         <div class="price shadow important"><p>€ 2.69</p></div>
@@ -174,7 +173,7 @@
                         <div><p class="verticalText">Pasūtīt</p></div>
                     </div>
                 </div>
-                <div class="card shadow">
+                <div id="mellenuPica" class="card shadow">
                     <div class="thumbnail shadow">
                         <img src="images/edienkarte/pizzas/mellenu.jpg" alt="">
                         <div class="price shadow"><p>€ 12.69</p></div>
@@ -189,7 +188,7 @@
                         <div><p class="verticalText">Pasūtīt</p></div>
                     </div>
                 </div>
-                <div class="card shadow">
+                <div id="garneluPica" class="card shadow">
                     <div class="thumbnail shadow">
                         <img src="images/edienkarte/pizzas/shokgarnel.jpg" alt="">
                         <div class="price shadow"><p>€ 12.69</p></div>
@@ -282,11 +281,11 @@
                         <p>Plāna mīklas pīrāgs, marināra mērce, mozzarella siers, grilleto cūkas gabali, sarkanas sīpolu šķēles, zaļie pipari, ķiršu tomāti, BBQ mērce un perfekti cepti cūciņu nuggeti.
                         </p>
                     </div>  
-                    <div class="button shadow">
+                    <div class="button shadow"  onclick="openForm('1','soups')">
                         <div><p class="verticalText">Pasūtīt</p></div>
                     </div>
                 </div>
-                <div class="card shadow">
+                <div id="susiZupa" class="card shadow">
                     <div class="thumbnail shadow">
                         <img src="images/edienkarte/soups/sushi.jpg" alt="">
                         <div class="price shadow"><p>€ 12.69</p></div>
@@ -297,7 +296,7 @@
                         <p>Plāna mīklas pīrāgs, marināra mērce, mozzarella siers, grilleto cūkas gabali, sarkanas sīpolu šķēles, zaļie pipari, ķiršu tomāti, BBQ mērce un perfekti cepti cūciņu nuggeti.
                         </p>
                     </div>  
-                    <div class="button shadow">
+                    <div class="button shadow" onclick="openForm('2','soups')">
                         <div><p class="verticalText">Pasūtīt</p></div>
                     </div>
                 </div>
@@ -312,7 +311,7 @@
                         <p>Plāna mīklas pīrāgs, marināra mērce, mozzarella siers, grilleto cūkas gabali, sarkanas sīpolu šķēles, zaļie pipari, ķiršu tomāti, BBQ mērce un perfekti cepti cūciņu nuggeti.
                         </p>
                     </div>  
-                    <div class="button shadow">
+                    <div class="button shadow" onclick="openForm('3','soups')">
                         <div><p class="verticalText">Pasūtīt</p></div>
                     </div>
                 </div>
@@ -327,7 +326,7 @@
                         <p>Plāna mīklas pīrāgs, marināra mērce, mozzarella siers, grilleto cūkas gabali, sarkanas sīpolu šķēles, zaļie pipari, ķiršu tomāti, BBQ mērce un perfekti cepti cūciņu nuggeti.
                         </p>
                     </div>  
-                    <div class="button shadow">
+                    <div class="button shadow" onclick="openForm('4','soups')">
                         <div><p class="verticalText">Pasūtīt</p></div>
                     </div>
                 </div>
@@ -342,7 +341,7 @@
                         <p>Plāna mīklas pīrāgs, marināra mērce, mozzarella siers, grilleto cūkas gabali, sarkanas sīpolu šķēles, zaļie pipari, ķiršu tomāti, BBQ mērce un perfekti cepti cūciņu nuggeti.
                         </p>
                     </div>  
-                    <div class="button shadow">
+                    <div class="button shadow" onclick="openForm('5','soups')">
                         <div><p class="verticalText">Pasūtīt</p></div>
                     </div>
                 </div>
@@ -352,7 +351,7 @@
             <h2 id="pancakesSection">Pankūkas</h2>
             <hr>
             <div class="productsBox">
-                <div class="card shadow">
+                <div id="makaronuPankukas" class="card shadow">
                     <div class="thumbnail shadow">
                         <img src="images/edienkarte/pancakes/makaronu.jpg" alt="">
                         <div class="price shadow"><p>€ 12.69</p></div>
@@ -363,7 +362,7 @@
                         <p>Plāna mīklas pīrāgs, marināra mērce, mozzarella siers, grilleto cūkas gabali, sarkanas sīpolu šķēles, zaļie pipari, ķiršu tomāti, BBQ mērce un perfekti cepti cūciņu nuggeti.
                         </p>
                     </div>  
-                    <div class="button shadow">
+                    <div class="button shadow" onclick="openForm('1','pancakes')">
                         <div><p class="verticalText">Pasūtīt</p></div>
                     </div>
                 </div>
@@ -378,7 +377,7 @@
                         <p>Plāna mīklas pīrāgs, marināra mērce, mozzarella siers, grilleto cūkas gabali, sarkanas sīpolu šķēles, zaļie pipari, ķiršu tomāti, BBQ mērce un perfekti cepti cūciņu nuggeti.
                         </p>
                     </div>  
-                    <div class="button shadow">
+                    <div class="button shadow"onclick="openForm('2','pancakes')">
                         <div><p class="verticalText">Pasūtīt</p></div>
                     </div>
                 </div>
@@ -393,7 +392,7 @@
                         <p>Plāna mīklas pīrāgs, marināra mērce, mozzarella siers, grilleto cūkas gabali, sarkanas sīpolu šķēles, zaļie pipari, ķiršu tomāti, BBQ mērce un perfekti cepti cūciņu nuggeti.
                         </p>
                     </div>  
-                    <div class="button shadow">
+                    <div class="button shadow" onclick="openForm('3','pancakes')">
                         <div><p class="verticalText">Pasūtīt</p></div>
                     </div>
                 </div>
@@ -414,7 +413,7 @@
                         <p>Plāna mīklas pīrāgs, marināra mērce, mozzarella siers, grilleto cūkas gabali, sarkanas sīpolu šķēles, zaļie pipari, ķiršu tomāti, BBQ mērce un perfekti cepti cūciņu nuggeti.
                         </p>
                     </div>  
-                    <div class="button shadow">
+                    <div class="button shadow" onclick="openForm('1','drinks')">
                         <div><p class="verticalText">Pasūtīt</p></div>
                     </div>
                 </div>
@@ -429,11 +428,11 @@
                         <p>Plāna mīklas pīrāgs, marināra mērce, mozzarella siers, grilleto cūkas gabali, sarkanas sīpolu šķēles, zaļie pipari, ķiršu tomāti, BBQ mērce un perfekti cepti cūciņu nuggeti.
                         </p>
                     </div>  
-                    <div class="button shadow">
+                    <div class="button shadow" onclick="openForm('2','drinks')">
                         <div><p class="verticalText">Pasūtīt</p></div>
                     </div>
                 </div>
-                <div class="card shadow">
+                <div id="mellenuTeja" class="card shadow">
                     <div class="thumbnail shadow">
                         <img src="images/edienkarte/drinks/mellenu.jpg" alt="">
                         <div class="price shadow"><p>€ 12.69</p></div>
@@ -444,7 +443,7 @@
                         <p>Plāna mīklas pīrāgs, marināra mērce, mozzarella siers, grilleto cūkas gabali, sarkanas sīpolu šķēles, zaļie pipari, ķiršu tomāti, BBQ mērce un perfekti cepti cūciņu nuggeti.
                         </p>
                     </div>  
-                    <div class="button shadow">
+                    <div class="button shadow" onclick="openForm('3','drinks')">
                         <div><p class="verticalText">Pasūtīt</p></div>
                     </div>
                 </div>

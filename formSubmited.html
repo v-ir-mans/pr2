@@ -14,83 +14,19 @@
     <meta name="theme-color" content="#ffffff">
     
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/veidlapa.css">
 
-    <script src="js/version.js"></script>
-    
     <style>
-        @keyframes fadeIn {
-        from {
-            opacity: 0; /* Start with 0 opacity (completely transparent) */
+        section {
+            text-align: center;
+            font-size: xx-large;
+            font-weight: 800;
         }
-        to {
-            opacity: 1; /* End with 1 opacity (fully visible) */
-        }
-        }
-
-        #popupAd{
-            background-color: #fff8ec70;
-            position: absolute;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            height: 100%;
-            
-            align-items: center;
-            justify-content: center;
-
-            animation: fadeIn 1s ease-in-out;
-
-            display:none ;
-        }
-        #popupAd>*{
-            animation: fadeIn 2s ease-out;
-        }
-        #popupAd>img{
+        iframe {
             border-radius: 20px;
-            overflow: hidden;
-            height: fit-content;
-            width: fit-content;
-        }
-        #popupAd>#close{
-            width: 100px;
-            height: 100px;
-            background-color: rgb(158, 87, 87);
-            position: absolute;
-            right: 20px;
-            top: 20px;
-            border-radius: 20px;
-            transition: 0.5s;
-        }
-        #popupAd>#close:hover{
-            background-color: black;
-            cursor: pointer;
-            transform: scale(0.9);
-
-        }
-        #popupAd>#close>img{
-            width: 100%;
-            height: 100%;
         }
     </style>
-
 <body>
-    <div id="popupAd" onclick="closeAd(this)">
-            <img  class="shadow" src="images/reklama.jpg" usemap="#image-map">
-
-            <map name="image-map">
-                <area target="" alt="Melleņu pica" title="Melleņu pica" href="edienkarte.html#mellenuPica" coords="66,580,172" shape="circle">
-                <area target="" alt="Garneļu pica" title="Garneļu pica" href="edienkarte.html#garneluPica" coords="170,275,137" shape="circle">
-                <area target="" alt="Banānu pica" title="Banānu pica" href="edienkarte.html#bananuPica" coords="1044,309,155" shape="circle">
-                <area target="" alt="Pankūkas ar spageti" title="Pankūkas ar makaroniem" href="edienkarte.html#makaronuPankukas" coords="393,518,148" shape="circle">
-                <area target="" alt="Melleņu tēja" title="Melleņu tēja" href="edienkarte.html#mellenuTeja" coords="594,299,130" shape="circle">
-                <area target="" alt="Suši zupa" title="Suši zupa" href="edienkarte.html#susiZupa" coords="804,511,145" shape="circle">
-            </map>
-
-            <div class="shadow" id="close">
-                <img src="images/icons/close-svgrepo-com.svg" alt="">
-            </div>
-    </div>
-
 
     <div id="bigContainer">
         <header class="shadow">
@@ -103,12 +39,12 @@
             </div>
             <nav>
                 <div id="navbarTabs">
-                    <a class="selectedTab" href="index.html"><div><p>Sākumlapa</p></div></a>
-                    <a  href="edienkarte.html"><div><p>Ēdienkarte</p></div></a>
+                    <a href="index.html"><div><p>Sākumlapa</p></div></a>
+                    <a href="edienkarte.html"><div><p>Ēdienkarte</p></div></a>
                     <a href=""><div><p>Home</p></div></a>
                     <a href=""><div><p>Home</p></div></a>
                     <a href=""><div><p>Home</p></div></a>
-                    <a class="important" href="veidlapa.html"><div><p>Pasūtīt</p></div></a>
+                    <a class=" important" href="veidlapa.html"><div><p>Pasūtīt</p></div></a>
                 </div>
                 <div id="iconRow">
                     
@@ -131,7 +67,8 @@
         </header>
         
         <section>
-
+            <p>Jūsu pasūtījums tiek apstrādāts un mēs ar Jums sazināsimies tuvākajā laikā!</p>
+            <iframe src="https://giphy.com/embed/eccZTdMZtUjfy" width="480" height="267" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
         </section>
         
         <footer class="shadow">
@@ -164,18 +101,5 @@
             
         </footer>
     </div>
-
-    <script>
-        function closeAd(ad) {
-            ad.style.display = "none";
-            document.cookie = "adShown=true";
-        }
-
-        var isAdShown = document.cookie.includes("adShown=true");
-        if (isAdShown){
-        }else{
-            document.getElementById("popupAd").style.display="flex"
-        }
-    </script>
 </body>
 </html>
