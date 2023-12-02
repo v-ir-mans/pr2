@@ -11,16 +11,17 @@ function userChangesInput(selCheckbox) {
 }
 
 function renderOrder() {
-    let checkboxes = document.querySelectorAll('.itemCheckbox:checked')
-    console.log(checkboxes);
+
+
+
 
     let orderDiv = document.getElementById("orderList")
-    let divsInOrderDiv = orderDiv.querySelectorAll('label');
+    let labelsInOrderDiv = orderDiv.querySelectorAll('label');
 
 
     let curIdsList = [];
     let curValueDict={};
-    divsInOrderDiv.forEach((div) => {
+    labelsInOrderDiv.forEach((div) => {
         let divId = div.id;
         curIdsList.push(divId);
 
@@ -35,13 +36,12 @@ function renderOrder() {
         }
     });
 
-    console.log(curValueDict);
-
-
+    let checkboxes = document.querySelectorAll('.itemCheckbox:checked')
+    console.log(checkboxes);
+    
     let nosaukums
     let boxId
 
-    var currentDate = new Date();
 
     checkboxes.forEach((box) => {
         
