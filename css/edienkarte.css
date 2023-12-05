@@ -110,23 +110,4 @@ section {
         font-weight: 500;
         
     }
-    #goUp{
-        width: 90px;
-        height: 90px;
-        background-color: #fff8ec;
-        position: sticky;
-        display: block;
-        bottom: 10px;
-        float: right;
-
-        border-radius: 20px;
-        transition: 0.35s;
-    }
-    #goUp:hover{
-        background-color: black;
-    }
-    #goUp>img{
-        width: 90px;
-        height: 90px;
-    }
 }

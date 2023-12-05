@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Picērija pR2</title>
+    <title>pR2 | Kontakti</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_package_v0.16/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_package_v0.16/favicon-32x32.png">
@@ -14,102 +14,7 @@
     <meta name="theme-color" content="#ffffff">
     
     <link rel="stylesheet" href="css/main.css">
-
-    <style>
-        section{
-            display: grid;
-            grid-template-columns:1fr 1fr ;
-            gap: 20px;
-        }
-
-        section>div{
-            border-radius: 20px;
-            background-color: white;
-        }
-        #contactBox{
-            width: 100%;
-            
-            display:flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .photoBox{
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-
-            position: relative;
-        }
-        .photoBox>img{
-            object-fit: cover;
-            height: 100%;
-            width: 100%;
-        }
-        #contactBox>ul{
-            list-style: none;
-            list-style-position: outside;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            gap: 10px;
-            padding-left: 0;
-            height: 90%;
-            width: 96%;
-            margin-top: 0%;
-        }
-        #contactBox>ul>li{
-            border-radius: 20px;
-            background-color: #ffffff;
-            padding-left: 25px;
-            padding-top: 10px;
-            padding-right: 25px;
-
-            transition: 0.4s;
-            position: relative;
-            overflow: hidden;
-        }
-        #contactBox>ul>li>p{
-            z-index: 100;
-        }
-        #contactBox>ul>li>img{
-            height: 50px;
-            display: inline-block;
-
-        }
-        #contactBox>ul>li:hover{
-            background-color: #FFB639;
-
-        }
-
-        #weekPlan{
-            grid-column: span 2;
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-        }
-        #weekPlan>h3{
-            line-height: 0%;
-        }
-        #weekPlan>table{
-            border-radius: 20px;
-            text-align: center;
-            overflow: hidden;
-            padding: 10px;
-        }
-        #weekPlan>table>tbody>tr>td{
-            background-color: antiquewhite;
-            border-radius: 20px;
-            padding:15px;
-        }
-        #bigMap{
-            border-radius: 20px;
-            overflow: hidden;
-        }
-        #bigMap>iframe{
-            width: 100%;
-            height: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="css/kontakti.css">
     
 <body>
 
@@ -125,9 +30,9 @@
             <nav>
                 <div id="navbarTabs">
                     <a href="index.html"><div><p>Sākumlapa</p></div></a>
-                    <a class="selectedTab"  href="parmums.html"><div><p>Par mums</p></div></a>
+                    <a  href="parmums.html"><div><p>Par mums</p></div></a>
                     <a  href="edienkarte.html"><div><p>Ēdienkarte</p></div></a>
-                    <a href="kontakti.html"><div><p>Kontakti</p></div></a>
+                    <a class="selectedTab" href="kontakti.html"><div><p>Kontakti</p></div></a>
                     <a class="important" href="veidlapa.html"><div><p>Pasūtīt</p></div></a>
                 </div>
                 <div id="iconRow">
@@ -180,12 +85,12 @@
                 </table>
             </div>
             <div class="shadow photoBox">
-            <img src="images/interjers/1.jpg" alt="">
+            <img src="images/interjers/1.jpg" alt="Picērija no iekšienes">
             </div>
             <div id="contactBox" class="shadow">
                 <ul>
                     <li class="shadow">
-                        <img src="/images/icons/phone-flip-svgrepo-com.svg" alt="">
+                        <img src="images/icons/phone-svgrepo-com.svg">
                         <h3>
                             Telefona numurs:
                         </h3>
@@ -193,27 +98,28 @@
                         
                     </li>
                     <li class="shadow">                        
-                        <img src="/images/icons/map-tag-svgrepo-com.svg" alt="">
+                        <img src="images/icons/place-marker-svgrepo-com.svg">
                         <h3>
                             Adrese:
                         </h3>
-                        <p>Ielas nosaukums 123, Pilsētas nosaukums, LV-1234</p>
-
+                        <p>Aspazijas bulvāris 20, <br> Centra rajons, Rīga, <br> LV-1050</p>
                     </li>
                     <li class="shadow">
+                        <img src="images/icons/mail-svgrepo-com.svg">
                         <h3>
                             E-pasts:
                         </h3>
-                        <p>info@example.com</p>
+                        <p>olivers@pr2.lv</p>
                     </li>
                     <li class="shadow">
+                        <img src="images/icons/social-share-svgrepo-com.svg">
                         <h3>
                             Sociālie tīkli:
                         </h3>
                         <p>
-                            <a href="https://www.facebook.com/example" target="_blank">Facebook</a>, 
-                            <a href="https://twitter.com/example" target="_blank">Twitter</a>, 
-                            <a href="https://www.linkedin.com/in/example" target="_blank">LinkedIn</a>
+                            <a href="https://www.instagram.com/NASA/">Instagram</a>
+                            <a href="https://www.facebook.com/NASA/">Facebook</a>
+                            <a href="https://twitter.com/NASA">Twitter</a>
                         </p>
                     </li>
                 </ul>
@@ -221,12 +127,11 @@
             </div>
 
             <div class="shadow photoBox">
-                <img src="images/interjers/2.jpg" alt="">
+                <img src="images/interjers/2.jpg" alt="Picērijas fasāde">
                 </div>
             <div id="bigMap" class="shadow">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2175.9059257598633!2d24.11092570051432!3d56.950413017922145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecfd16a61e619%3A0x4c0a0d4417be2d4d!2sPulkstenis%20%22Laima%22!5e0!3m2!1slv!2slv!4v1701693266561!5m2!1slv!2slv" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            
         </section>
         
         <footer class="shadow">
@@ -264,7 +169,7 @@
                 </div>
             </div>
 
-            <div class="allRows shadow" id="disclaimer"><p>Visas tiesības rezervētas © 2023 SBA Rādiuss 01/12/23</p></div>
+            <div class="allRows shadow" id="disclaimer"><p>Visas tiesības rezervētas © 2023 SBA Rādiuss</p></div>
             
         </footer>
     </div>

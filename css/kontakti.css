@@ -1,0 +1,93 @@
+section{
+    display: grid;
+    grid-template-columns:1fr 1fr ;
+    gap: 20px;
+}
+
+section>div{
+    border-radius: 20px;
+    background-color: white;
+}
+#contactBox{
+    width: 100%;
+    
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.photoBox{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    position: relative;
+}
+.photoBox>img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+#contactBox>ul{
+    list-style: none;
+    list-style-position: outside;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    padding-left: 0;
+    height: 90%;
+    width: 96%;
+    margin-top: 0%;
+}
+#contactBox>ul>li{
+    border-radius: 20px;
+    background-color: #ffffff;
+
+
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
+    padding-left: 20px;
+
+
+}
+#contactBox>ul>li>h3{
+    margin: 0%;
+}
+
+
+#contactBox>ul>li>img{
+    height: 50px;
+    opacity: 0.5;
+}
+
+#weekPlan{
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+#weekPlan>h3{
+    line-height: 0%;
+}
+#weekPlan>table{
+    border-radius: 20px;
+    text-align: center;
+    overflow: hidden;
+    padding: 10px;
+}
+#weekPlan>table>tbody>tr>td{
+    background-color: antiquewhite;
+    border-radius: 20px;
+    padding:15px;
+}
+#bigMap{
+    border-radius: 20px;
+    overflow: hidden;
+}
+#bigMap>iframe{
+    width: 100%;
+    height: 100%;
+}
