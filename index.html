@@ -14,76 +14,10 @@
     <meta name="theme-color" content="#ffffff">
     
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
 
     <script src="js/version.js"></script>
-    
-    <style>
-        @keyframes fadeIn {
-        from {
-            opacity: 0; /* Start with 0 opacity (completely transparent) */
-        }
-        to {
-            opacity: 1; /* End with 1 opacity (fully visible) */
-        }
-        }
 
-        #popupAd{
-            background-color: #fff8ec70;
-            position: absolute;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            height: 100%;
-            
-            align-items: center;
-            justify-content: center;
-
-            animation: fadeIn 1s ease-in-out;
-
-            display:none ;
-        }
-        #popupAd>*{
-            animation: fadeIn 2s ease-out;
-        }
-        #popupAd>img{
-            border-radius: 20px;
-            overflow: hidden;
-            height: fit-content;
-            width: fit-content;
-        }
-        #popupAd>#close{
-            width: 100px;
-            height: 100px;
-            background-color: rgb(158, 87, 87);
-            position: absolute;
-            right: 20px;
-            top: 20px;
-            border-radius: 20px;
-            transition: 0.5s;
-        }
-        #popupAd>#close:hover{
-            background-color: black;
-            cursor: pointer;
-            transform: scale(0.9);
-
-        }
-        #popupAd>#close>img{
-            width: 100%;
-            height: 100%;
-        }
-
-        section {
-            text-align: center;
-            margin-bottom: 0%;
-        }
-        section>h1 {
-            font-size: 300%;
-        }
-        section>img {
-            position: relative;
-            top: 20px;
-        }
-    </style>
 
 <body>
     <div id="popupAd" onclick="closeAd(this)">
