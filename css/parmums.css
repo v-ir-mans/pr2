@@ -1,0 +1,30 @@
+#aboutUsTextBox{
+    background-color: rgb(255, 255, 255);
+   
+}
+section>div{
+    max-width: 1000px;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+section>h1{
+    line-height: 50%;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#counterBox{
+    
+    background-color: #FFF8EC;
+    text-align: center;
+}
+.changableNum{
+    background-color: #FFB639;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 20px;
+}
